@@ -3,7 +3,7 @@ import { Avatar } from "@/app/ui/avatar";
 
 export function RightSidebar() {
   return (
-    <aside className="hidden w-80 shrink-0 pt-9 text-sm lg:block">
+    <aside className="hidden w-80 shrink-0 pt-9 text-sm xl:block">
       <div className="flex items-center gap-3">
         <Avatar src={currentUser.avatar} alt={currentUser.name} className="size-11" />
         <div className="min-w-0 flex-1"><p className="font-semibold text-white">{currentUser.username}</p><p className="text-zinc-500">{currentUser.name}</p></div>

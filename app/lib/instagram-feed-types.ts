@@ -20,6 +20,15 @@ export type Post = {
   likes: string;
   caption: string;
   comments: string;
+  commentList?: PostComment[];
+};
+
+export type PostComment = {
+  id: string;
+  user: UserProfile;
+  text: string;
+  timestamp: string;
+  likes?: string;
 };
 
 export type Suggestion = UserProfile & {

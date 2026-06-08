@@ -32,6 +32,10 @@ export const posts: Post[] = [
     likes: "14,982",
     caption: "Golden hour turned the whole block into a film still.",
     comments: "View all 238 comments",
+    commentList: [
+      { id: "c1", user: { id: "u3", username: "noirwalks", name: "Noir Walks", avatar: avatar("noir") }, text: "The color in this is unreal.", timestamp: "12m", likes: "18" },
+      { id: "c2", user: { id: "u4", username: "flora.lab", name: "Flora", avatar: avatar("flora") }, text: "Feels like a movie poster.", timestamp: "34m", likes: "7" },
+    ],
   },
   {
     id: "p2",
@@ -43,6 +47,10 @@ export const posts: Post[] = [
     likes: "8,413",
     caption: "Soft geometry, loud color, quiet morning.",
     comments: "View all 91 comments",
+    commentList: [
+      { id: "c3", user: { id: "u5", username: "northlight", name: "North Light", avatar: avatar("north") }, text: "Clean lines everywhere.", timestamp: "8m", likes: "4" },
+      { id: "c4", user: { id: "u6", username: "analog.tea", name: "Analog Tea", avatar: avatar("tea") }, text: "That green fade is perfect.", timestamp: "1h", likes: "11" },
+    ],
   },
 ];
 

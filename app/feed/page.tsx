@@ -1,6 +1,5 @@
 import { posts } from "@/app/lib/instagram-feed-data";
 import { FeedPost } from "@/app/ui/instagram/FeedPost";
-import { MessagesFloatingButton } from "@/app/ui/instagram/MessagesFloatingButton";
 import { RightSidebar } from "@/app/ui/instagram/RightSidebar";
 import { Sidebar } from "@/app/ui/instagram/Sidebar";
 import { StoriesBar } from "@/app/ui/instagram/StoriesBar";
@@ -20,7 +19,6 @@ export default function MainFeed() {
         </section>
         <RightSidebar />
       </div>
-      <MessagesFloatingButton />
     </main>
   );
 }

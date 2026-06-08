@@ -15,9 +15,9 @@ export function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="fixed inset-y-0 left-0 z-30 hidden w-[76px] border-r border-zinc-900 bg-black px-3 py-6 text-white sm:flex xl:w-60 xl:px-5">
+    <aside className="fixed inset-y-0 left-0 z-30 hidden w-76px border-r border-zinc-900 bg-black px-3 py-6 text-white sm:flex xl:w-60 xl:px-5">
       <div className="flex w-full flex-col">
-        <div className="mb-8 px-2 text-xl font-black tracking-tight xl:text-2xl">Lensgram</div>
+        <div className="mb-8 px-2 text-lg font-black tracking-tight xl:text-2xl">Lensgram</div>
         <nav className="space-y-2">
           {items.map(([Icon, label, href]) => (
             <Link key={href} className={`flex items-center gap-4 rounded-xl px-3 py-3 text-sm ${pathname === href ? "font-bold" : "text-zinc-200 hover:bg-zinc-900"}`} href={href}>

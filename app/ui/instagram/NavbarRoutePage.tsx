@@ -1,5 +1,4 @@
 import type { LucideIcon } from "lucide-react";
-import { MessagesFloatingButton } from "@/app/ui/instagram/MessagesFloatingButton";
 import { Sidebar } from "@/app/ui/instagram/Sidebar";
 
 type NavbarRoutePageProps = {
@@ -21,7 +20,6 @@ export function NavbarRoutePage({ title, description, icon: Icon }: NavbarRouteP
           <p className="mt-4 max-w-xl text-base leading-7 text-zinc-400 sm:text-lg">{description}</p>
         </div>
       </section>
-      <MessagesFloatingButton />
     </main>
   );
 }
