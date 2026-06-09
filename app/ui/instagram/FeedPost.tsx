@@ -88,7 +88,7 @@ export function FeedPost({ post }: { post: Post }) {
             <div aria-label={post.imageAlt} className="min-h-80 flex-1 bg-cover bg-center" style={{ background: post.image }}>
               <div className="h-full min-h-80 bg-[radial-gradient(circle_at_65%_28%,rgba(255,255,255,.45),transparent_14%),linear-gradient(to_top,rgba(0,0,0,.32),transparent_48%)]" />
             </div>
-            <section className="flex w-full flex-col border-zinc-800 bg-[#202329] sm:w-[500px] sm:border-l">
+            <section className="flex w-full flex-col border-zinc-800 bg-[#202329] sm:w-125 sm:border-l">
               <header className="flex items-center gap-3 border-b border-zinc-800 p-4">
                 <Avatar src={post.user.avatar} alt={post.user.name} className="size-9" />
                 <div className="min-w-0 flex-1 text-sm"><p className="font-semibold text-white">{post.user.username} {post.verified && <CheckCircle2 className="inline size-3.5 fill-blue-500 text-black" />}</p><p className="text-xs text-zinc-300">{post.location}</p></div>
@@ -106,7 +106,7 @@ export function FeedPost({ post }: { post: Post }) {
       )}
 
       {shareOpen && (
-        <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/76 px-4" role="dialog" aria-modal="true" aria-label="Share post">
+        <div className="fixed inset-0 z-60 flex items-center justify-center bg-black/76 px-4" role="dialog" aria-modal="true" aria-label="Share post">
           <div className="w-full max-w-xl overflow-hidden rounded-3xl bg-[#24272d] text-white shadow-2xl">
             <header className="relative border-b border-zinc-800 px-5 py-4 text-center font-bold"><button aria-label="Close share modal" className="absolute left-5 top-3" type="button" onClick={() => setShareOpen(false)}><X className="size-7" /></button>Share</header>
             <div className="p-4"><label className="flex items-center gap-3 rounded bg-[#2c3037] px-4 py-3 text-sm text-zinc-300"><Search className="size-5" /><input className="min-w-0 flex-1 bg-transparent outline-none placeholder:text-zinc-400" placeholder="Search" /></label><div className="grid grid-cols-3 gap-6 py-6 sm:grid-cols-4">{[post.user, ...comments.map((comment) => comment.user)].slice(0, 8).map((user) => <button className="min-w-0 text-center" type="button" key={user.id}><Avatar src={user.avatar} alt={user.name} className="mx-auto size-16" /><span className="mt-2 block truncate text-xs font-semibold">{user.username}</span></button>)}</div></div>

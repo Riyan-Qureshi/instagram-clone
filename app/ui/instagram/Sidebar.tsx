@@ -5,11 +5,18 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { currentUser } from "@/app/lib/instagram-feed-data";
 import { Avatar } from "@/app/ui/avatar";
+import clsx from "clsx";
 
-const items = [
-  [Home, "Home", "/feed"], [Search, "Search", "/search"], [Compass, "Explore", "/explore"], [Clapperboard, "Reels", "/reels"],
-  [MessageCircle, "Messages", "/messages"], [Bell, "Notifications", "/notifications"], [PlusSquare, "Create", "/create"], [UserRound, "Profile", "/profile"],
-] as const;
+const links = [
+  {icon: Home, name: "Home", href: "/feed"}, 
+  {icon: Search, name: "Search", href: "/search"}, 
+  {icon: Compass, name: "Explore", href: "/explore"}, 
+  {icon: Clapperboard, name: "Reels", href: "/reels"},
+  {icon: MessageCircle, name: "Messages", href: "/messages"}, 
+  {icon: Bell, name: "Notifications", href: "/notifications"}, 
+  {icon: PlusSquare, name: "Create", href: "/create"}, 
+  {icon: UserRound, name: "Profile", href: "/profile"},
+];
 
 export function Sidebar() {
   const pathname = usePathname();
@@ -19,19 +26,34 @@ export function Sidebar() {
       <div className="flex w-full flex-col">
         <div className="mb-8 px-2 text-lg font-black tracking-tight xl:text-2xl">Lensgram</div>
         <nav className="space-y-2">
-          {items.map(([Icon, label, href]) => (
-            <Link key={href} className={`flex items-center gap-4 rounded-xl px-3 py-3 text-sm ${pathname === href ? "font-bold" : "text-zinc-200 hover:bg-zinc-900"}`} href={href}>
-              <Icon className="size-6" />
-              <span className="hidden xl:inline">{label}</span>
-            </Link>
-          ))}
+          {links.map((link) => { 
+            const LinkIcon = link.icon;
+            return(
+              <Link 
+                key={link.name} 
+                href={link.href}
+                className={clsx(
+                  "flex items-center gap-4 rounded-xl px-3 py-3 text-sm text-zinc-200 hover:bg-zinc-900",
+                  {"font-bold" : pathname === link.href},     
+                )} >
+                  <LinkIcon className="w-6" />
+                  <span className="hidden md:inline">{link.name}</span>
+              </Link>
+            );
+          })}
         </nav>
         <div className="mt-auto space-y-3">
           <div className="flex items-center gap-3 rounded-xl px-3 py-3 text-sm text-zinc-300">
             <Avatar src={currentUser.avatar} alt={currentUser.name} className="size-6" />
-            <span className="hidden xl:inline">{currentUser.username}</span>
+            <span className="hidden md:inline">{currentUser.username}</span>
           </div>
-          <a className="flex items-center gap-4 rounded-xl px-3 py-3 text-sm text-zinc-300 hover:bg-zinc-900" href="#"><Menu className="size-6" /><span className="hidden xl:inline">More</span></a>
+          <Link 
+            href="#"
+            className="flex items-center gap-4 rounded-xl px-3 py-3 text-sm text-zinc-300 hover:bg-zinc-900"
+          >
+            <Menu className="size-6" />
+            <span className="hidden xl:inline">More</span>
+          </Link>
           <p className="hidden px-3 text-xs text-zinc-600 xl:block">Also from Meta</p>
         </div>
       </div>
