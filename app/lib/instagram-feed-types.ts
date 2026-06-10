@@ -9,7 +9,7 @@ export type Story = UserProfile & {
   seen?: boolean;
 };
 
-export type Post = {
+export type InstagramPostBase = {
   id: string;
   user: UserProfile;
   location: string;
@@ -21,6 +21,13 @@ export type Post = {
   caption: string;
   comments: string;
   commentList?: PostComment[];
+};
+
+export type Post = InstagramPostBase;
+
+export type ExplorePost = InstagramPostBase & {
+  aspect: "square" | "portrait" | "wide" | "tall";
+  type?: "post" | "reel" | "carousel";
 };
 
 export type PostComment = {
