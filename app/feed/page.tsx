@@ -1,8 +1,8 @@
 import { posts } from "@/app/lib/instagram-feed-data";
-import { FeedPost } from "@/app/ui/instagram/FeedPost";
-import { RightSidebar } from "@/app/ui/instagram/RightSidebar";
-import { Sidebar } from "@/app/ui/instagram/Sidebar";
-import { StoriesBar } from "@/app/ui/instagram/StoriesBar";
+import { FeedPost } from "@/app/ui/feed/feed-post";
+import { RightSidebar } from "@/app/ui/feed/right-sidebar";
+import { StoriesBar } from "@/app/ui/feed/stories-bar";
+import { Sidebar } from "@/app/ui/shared/sidebar";
 
 export default function MainFeed() {
   return (

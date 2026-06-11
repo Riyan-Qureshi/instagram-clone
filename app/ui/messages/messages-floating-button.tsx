@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import { Send } from "lucide-react";
-import { AvatarStack } from "@/app/ui/instagram/AvatarStack";
-import { MessagesPanel } from "@/app/ui/instagram/MessagesPanel";
+import { AvatarStack } from "@/app/ui/messages/avatar-stack";
+import { MessagesPanel } from "@/app/ui/messages/messages-panel";
 
 export function MessagesFloatingButton() {
   const [open, setOpen] = useState(false);

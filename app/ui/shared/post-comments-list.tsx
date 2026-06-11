@@ -1,6 +1,6 @@
 import { Heart } from "lucide-react";
 import type { PostComment } from "@/app/lib/instagram-feed-types";
-import { Avatar } from "@/app/ui/avatar";
+import { Avatar } from "@/app/ui/shared/avatar";
 
 export function PostCommentsList({ comments }: { comments: PostComment[] }) {
   return comments.map((comment) => (

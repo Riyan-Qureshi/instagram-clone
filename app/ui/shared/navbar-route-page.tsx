@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react";
-import { Sidebar } from "@/app/ui/instagram/Sidebar";
+import { Sidebar } from "@/app/ui/shared/sidebar";
 
 type NavbarRoutePageProps = {
   title: string;

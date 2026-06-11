@@ -1,7 +1,7 @@
 import { Edit3, Maximize2, X } from "lucide-react";
 import { messages } from "@/app/lib/instagram-feed-data";
-import { Avatar } from "@/app/ui/avatar";
-import { Button } from "@/app/ui/button";
+import { Avatar } from "@/app/ui/shared/avatar";
+import { Button } from "@/app/ui/shared/button";
 
 export function MessagesPanel({ onClose }: { onClose: () => void }) {
   return (

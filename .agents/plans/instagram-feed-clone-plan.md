@@ -39,43 +39,43 @@ Shared TypeScript types for Story, Post, Suggestion, MessagePreview, and UserPro
 `app/lib/utils.ts`
 Utility helper required by shadcn/ui, including `cn()`.
 
-`app/ui/instagram/Sidebar.tsx`
+`app/ui/shared/sidebar.tsx`
 Fixed dark left sidebar with collapsed icon-first layout and expanded labels on larger screens.
 
-`app/ui/instagram/StoriesBar.tsx`
+`app/ui/feed/stories-bar.tsx`
 Horizontal stories container.
 
-`app/ui/instagram/StoryBubble.tsx`
+`app/ui/feed/story-bubble.tsx`
 Circular gradient story avatar with username label.
 
-`app/ui/instagram/FeedPost.tsx`
+`app/ui/feed/feed-post.tsx`
 Post header, image area, action row, likes, caption, and metadata.
 
-`app/ui/instagram/RightSidebar.tsx`
+`app/ui/feed/right-sidebar.tsx`
 Current user summary, suggestions, footer links, and copyright text.
 
-`app/ui/instagram/MessagesFloatingButton.tsx`
+`app/ui/messages/messages-floating-button.tsx`
 Client component controlling floating Messages pill and popup open state.
 
-`app/ui/instagram/MessagesPanel.tsx`
+`app/ui/messages/messages-panel.tsx`
 Compact messages popup with header, scrollable previews, close/expand icons, and compose button.
 
-`app/ui/instagram/AvatarStack.tsx`
+`app/ui/messages/avatar-stack.tsx`
 Overlapping avatar stack used in the floating messages pill.
 
-`app/ui/button.tsx`
+`app/ui/shared/button.tsx`
 shadcn/ui Button primitive.
 
-`app/ui/avatar.tsx`
+`app/ui/shared/avatar.tsx`
 shadcn/ui Avatar primitive.
 
-`app/ui/scroll-area.tsx`
+`app/ui/shared/scroll-area.tsx`
 shadcn/ui ScrollArea primitive.
 
-`app/ui/separator.tsx`
+`app/ui/shared/separator.tsx`
 shadcn/ui Separator primitive.
 
-`app/ui/tooltip.tsx`
+`app/ui/shared/tooltip.tsx`
 shadcn/ui Tooltip primitive.
 
 ## Dependencies

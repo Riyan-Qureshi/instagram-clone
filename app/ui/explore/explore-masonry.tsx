@@ -4,9 +4,9 @@ import clsx from "clsx";
 import { Bookmark, CheckCircle2, ChevronLeft, ChevronRight, Clapperboard, Heart, MessageCircle, MoreHorizontal, PanelsTopLeft, Send, Smile, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import type { ExplorePost } from "@/app/lib/instagram-feed-types";
-import { Avatar } from "@/app/ui/avatar";
-import { PostCommentsList } from "@/app/ui/instagram/PostCommentsList";
-import { ShareDialog } from "@/app/ui/instagram/ShareDialog";
+import { Avatar } from "@/app/ui/shared/avatar";
+import { PostCommentsList } from "@/app/ui/shared/post-comments-list";
+import { ShareDialog } from "@/app/ui/shared/share-dialog";
 
 const aspectClass: Record<ExplorePost["aspect"], string> = {
   square: "aspect-square",

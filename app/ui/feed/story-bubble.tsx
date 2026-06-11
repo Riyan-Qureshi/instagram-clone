@@ -1,6 +1,6 @@
 import type { Story } from "@/app/lib/instagram-feed-types";
 import { cn } from "@/app/lib/utils";
-import { Avatar } from "@/app/ui/avatar";
+import { Avatar } from "@/app/ui/shared/avatar";
 
 export function StoryBubble({ story }: { story: Story }) {
   return (

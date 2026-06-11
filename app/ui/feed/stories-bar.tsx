@@ -1,5 +1,5 @@
 import { stories } from "@/app/lib/instagram-feed-data";
-import { StoryBubble } from "@/app/ui/instagram/StoryBubble";
+import { StoryBubble } from "@/app/ui/feed/story-bubble";
 
 export function StoriesBar() {
   return (

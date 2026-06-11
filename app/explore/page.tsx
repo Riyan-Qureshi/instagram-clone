@@ -1,6 +1,6 @@
 import { explorePosts } from "@/app/lib/instagram-feed-data";
-import { ExploreMasonry } from "@/app/ui/instagram/ExploreMasonry";
-import { Sidebar } from "@/app/ui/instagram/Sidebar";
+import { ExploreMasonry } from "@/app/ui/explore/explore-masonry";
+import { Sidebar } from "@/app/ui/shared/sidebar";
 
 export default function ExplorePage() {
   return (

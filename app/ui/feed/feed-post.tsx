@@ -4,9 +4,9 @@ import { Bookmark, CheckCircle2, Heart, MessageCircle, MoreHorizontal, Send, Smi
 import { useEffect, useState } from "react";
 import type { Post } from "@/app/lib/instagram-feed-types";
 import { cn } from "@/app/lib/utils";
-import { Avatar } from "@/app/ui/avatar";
-import { PostCommentsList } from "@/app/ui/instagram/PostCommentsList";
-import { ShareDialog } from "@/app/ui/instagram/ShareDialog";
+import { Avatar } from "@/app/ui/shared/avatar";
+import { PostCommentsList } from "@/app/ui/shared/post-comments-list";
+import { ShareDialog } from "@/app/ui/shared/share-dialog";
 
 export function FeedPost({ post }: { post: Post }) {
   const [liked, setLiked] = useState(false);

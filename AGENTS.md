@@ -1,2 +1,3 @@
 - Always use Context7 when I need library/API documentation, code generation, setup or configuration steps without me having to explicitly ask.
 - Use clsx() to toggle between Tailwind classNames when conditionally styling based on state or condition 
+- Use kebab-case file naming convention

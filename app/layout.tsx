@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "@/app/ui/globals.css";
 import { geistMono, geistSans } from "@/app/ui/fonts";
-import { FloatingMessagesShell } from "@/app/ui/instagram/FloatingMessagesShell";
+import { FloatingMessagesShell } from "@/app/ui/messages/floating-messages-shell";
 
 
 export const metadata: Metadata = {

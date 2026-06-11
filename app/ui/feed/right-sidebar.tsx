@@ -1,5 +1,5 @@
 import { currentUser, suggestions } from "@/app/lib/instagram-feed-data";
-import { Avatar } from "@/app/ui/avatar";
+import { Avatar } from "@/app/ui/shared/avatar";
 
 export function RightSidebar() {
   return (

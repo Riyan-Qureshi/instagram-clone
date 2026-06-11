@@ -3,7 +3,7 @@
 import { Copy, Globe, Mail, MessageCircle, Search, Send, X } from "lucide-react";
 import { useState } from "react";
 import type { PostComment, UserProfile } from "@/app/lib/instagram-feed-types";
-import { Avatar } from "@/app/ui/avatar";
+import { Avatar } from "@/app/ui/shared/avatar";
 
 const shareTargets = [
   { label: "Copy link", icon: Copy },
