@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import "@/app/ui/globals.css";
 import { geistMono, geistSans } from "@/app/ui/fonts";
-import { FloatingMessagesShell } from "@/app/ui/messages/floating-messages-shell";
-
 
 export const metadata: Metadata = {
   title: "Instagram Clone",
@@ -19,7 +17,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}<FloatingMessagesShell /></body>
+      <body className="flex min-h-full flex-col">{children}</body>
     </html>
   );
 }
