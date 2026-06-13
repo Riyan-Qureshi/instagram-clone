@@ -4,7 +4,7 @@ import { AuthError } from 'next-auth';
 import { isRedirectError } from 'next/dist/client/components/redirect-error';
 import { z } from 'zod';
 
-import { signIn } from '@/auth';
+import { signIn, signOut } from '@/auth';
 
 const loginSchema = z.object({
   username: z.string().trim().min(1, 'Enter your username.'),
@@ -44,4 +44,8 @@ export async function authenticate(
   }
 
   return {};
+}
+
+export async function logout() {
+  await signOut({ redirectTo: '/' });
 }
