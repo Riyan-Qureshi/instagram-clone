@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Check, Heart, Star } from "lucide-react";
+import { LoginForm } from "@/app/ui/login/login-form";
 
 const footerLinks = [
   "Meta",
@@ -58,38 +59,7 @@ export default function Home() {
           <div className="w-full max-w-xl lg:max-w-none">
             <h2 className="text-lg font-bold text-white">Log into Instagram</h2>
 
-            <form action="/feed" className="mt-7 space-y-3">
-              <label className="sr-only" htmlFor="login-id">
-                Mobile number, username or email
-              </label>
-              <input
-                id="login-id"
-                name="login-id"
-                autoComplete="username"
-                className="h-14 w-full rounded-xl border border-zinc-600 bg-transparent px-4 text-sm font-medium text-white outline-none transition placeholder:text-zinc-400 focus:border-zinc-300"
-                placeholder="Mobile number, username or email"
-                type="text"
-              />
-
-              <label className="sr-only" htmlFor="password">
-                Password
-              </label>
-              <input
-                id="password"
-                name="password"
-                autoComplete="current-password"
-                className="h-14 w-full rounded-xl border border-zinc-600 bg-transparent px-4 text-sm font-medium text-white outline-none transition placeholder:text-zinc-400 focus:border-zinc-300"
-                placeholder="Password"
-                type="password"
-              />
-
-              <button
-                className="mt-6! h-11 w-full rounded-full bg-[#1c4f8f] text-sm font-bold text-zinc-400 transition hover:bg-[#2463ad] hover:text-white focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-offset-2 focus:ring-offset-[#202024]"
-                type="submit"
-              >
-                Log in
-              </button>
-            </form>
+            <LoginForm />
 
             <Link className="mx-auto mt-7 block w-fit text-sm font-bold text-white transition hover:text-zinc-300" href="#">
               Forgot password?
