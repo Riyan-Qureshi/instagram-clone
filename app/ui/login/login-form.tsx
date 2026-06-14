@@ -1,14 +1,14 @@
 'use client';
 
 import { useActionState } from 'react';
-import { useFormStatus } from 'react-dom';
 
 import { authenticate, type LoginState } from '@/app/lib/actions';
+import { Button } from '@/app/ui/shared/button';
 
 const initialState: LoginState = {};
 
 export function LoginForm() {
-  const [state, formAction] = useActionState(authenticate, initialState);
+  const [loginState, formAction, isPending] = useActionState(authenticate, initialState);
 
   return (
     <form action={formAction} className="mt-7 space-y-3">
@@ -20,7 +20,7 @@ export function LoginForm() {
         name="username"
         autoComplete="username"
         className="h-14 w-full rounded-xl border border-zinc-600 bg-transparent px-4 text-sm font-medium text-white outline-none transition placeholder:text-zinc-400 focus:border-zinc-300"
-        placeholder="Username"
+        placeholder="Enter username"
         type="text"
         required
       />
@@ -33,32 +33,23 @@ export function LoginForm() {
         name="password"
         autoComplete="current-password"
         className="h-14 w-full rounded-xl border border-zinc-600 bg-transparent px-4 text-sm font-medium text-white outline-none transition placeholder:text-zinc-400 focus:border-zinc-300"
-        placeholder="Password"
+        placeholder="Enter password"
         type="password"
         required
       />
 
-      {state.message ? (
+      {loginState.message ? (
         <p className="rounded-xl border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm font-medium text-red-200" role="alert">
-          {state.message}
+          {loginState.message}
         </p>
       ) : null}
 
-      <LoginButton />
+      <Button // Login button 
+        className='mt-6! h-11 w-full rounded-full bg-[#1c4f8f] text-sm font-bold text-zinc-400 transition hover:bg-[#2463ad] hover:text-white focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-offset-2 focus:ring-offset-[#202024] disabled:cursor-not-allowed disabled:opacity-70'
+        aria-disabled={isPending}
+      >
+        {isPending ? 'Logging in...' : 'Log in'}
+      </Button>
     </form>
-  );
-}
-
-function LoginButton() {
-  const { pending } = useFormStatus();
-
-  return (
-    <button
-      className="mt-6! h-11 w-full rounded-full bg-[#1c4f8f] text-sm font-bold text-zinc-400 transition hover:bg-[#2463ad] hover:text-white focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-offset-2 focus:ring-offset-[#202024] disabled:cursor-not-allowed disabled:opacity-70"
-      type="submit"
-      disabled={pending}
-    >
-      {pending ? 'Logging in...' : 'Log in'}
-    </button>
   );
 }
